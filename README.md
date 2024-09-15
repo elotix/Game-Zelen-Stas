@@ -47,6 +47,7 @@ Alex: Такая рука недоступна, введите повторно 
 Jame: 3 <br />
 Jame cards: Carrot - 1; Corn - 2; Eggplant - 0;  Tomato - 0; <br />
 Price: Corn - ; Eggplant - ; Broccoli- ; Tomato - <br />
+
 Leftover cards: <br />
 1) Carrot - 3; Corn - 2 <br />
 2) Tomato - 1; Eggplant - 2<br />
@@ -63,7 +64,7 @@ Alex: введите, какую карту будем брать: <br />
 Jame: 1<br />
 Jame cards: Corn - ; Eggplant - ; Broccoli - ; Tomato - <br />
 Price: Corn - ; Eggplant - ; Broccoli- ; Tomato - <br />
------<br />
+
 Price: Corn - ; Eggplant - ; Broccoli - ; Tomato - ;<br />
 Leftover cards:<br />
 2) Corn - 2; Tomato- 1<br />
@@ -74,4 +75,26 @@ Alex: 2<br />
 Alex cards: Corn - ; Eggplant - ; Broccoli - ; Tomato - ;<br />
 Price: Corn - ; Eggplant - ; Broccoli- ; Tomato - ;<br />
 
+#Формат save-файла <br />
 
+{
+  "Price": "Eggplant - 0; Corn -1; Carrot -2; Tomato -3;",
+  "Table": [
+    1) Carrot - 3; Corn - 2
+    2) Tomato - 1; Eggplant - 2
+    3) Carrot - 1; Corn - 2
+  ],
+  "current_player_index": 1,
+  "players": [
+  {
+      "name": "Jame",
+      "hand": "Carrot - 1; Corn - 2; Eggplant - 0;  Tomato - 0;"
+      "is_human": true
+    },
+    {
+      "name": "Alex",
+      "hand": "Tomato - 1; Eggplant - 2; Corn - 0; Carrot - 0",
+      "is_human": false
+    }
+  ]
+}
