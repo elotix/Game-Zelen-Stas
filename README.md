@@ -32,4 +32,46 @@
 Последнюю карту этого раунда положите в сброс рядом с колодой лицевой стороной вниз, а остальные перемешайте и выложите, как в начале этого раунда.<br /> Теперь первым игроком становится игрок слева от вас. Он начинает новый раунд и будет первым выбирать карту овоща из ряда.<br />
 # Подсчет очков
 По истечению всех раундов игроки считают кол-во овощей у себя на руках.<br />
-Итоговое кол-во очков считается как сумма произведений овощей на их стоимость.
+Итоговое кол-во очков считается как сумма произведений овощей на их стоимость.<br />
+
+# Пример текстового интерфейса игры<br />
+Играют Alex и Jame<br />
+Price: Eggplant - 0; Corn -1; Carrot -2; Tomato -3;<br />
+Table: <br />
+1) Carrot - 3; Corn - 2 <br />
+2) Tomato - 1; Eggplant - 2<br />
+3) Carrot - 1; Corn - 2<br />
+Alex: введите, какую карту будем брать: <br />
+Jame: 56 <br />
+Alex: Такая рука недоступна, введите повторно <br />
+Jame: 3 <br />
+Jame cards: Carrot - 1; Corn - 2; Eggplant - 0;  Tomato - 0; <br />
+Price: Corn - ; Eggplant - ; Broccoli- ; Tomato - 
+Leftover cards: <br />
+1) Carrot - 3; Corn - 2 <br />
+2) Tomato - 1; Eggplant - 2<br />
+Jame: введите, какую карту будем брать: <br />
+Alex: 2<br />
+Alex cards: Tomato - 1; Eggplant - 2; Corn - 0; Carrot - 0 <br />
+Price: Corn - ; Eggplant - ; Broccoli- ; Tomato - 
+
+Table: 
+1) Carrot - 2; Tomato - 1
+2) Corn - 2; Tomato- 1
+3) Eggplant - 2; Tomato - 1
+Alex: введите, какую карту будем брать: <br />
+Jame: 1
+Jame cards: Corn - ; Eggplant - ; Broccoli - ; Tomato - 
+Price: Corn - ; Eggplant - ; Broccoli- ; Tomato - 
+-----
+Price: Corn - ; Eggplant - ; Broccoli - ; Tomato - ;
+Leftover cards:
+2) Corn - 2; Tomato- 1
+3) Eggplant - 2; Tomato - 1
+Alex: Corn - ; Eggplant - ; Broccoli - ; Tomato - ;
+Alex: введите, какую карту будем брать: <br />
+Alex: 2
+Alex: Corn - ; Eggplant - ; Broccoli - ; Tomato - ;
+Price: Corn - ; Eggplant - ; Broccoli- ; Tomato - ;
+
+
