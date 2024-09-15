@@ -46,32 +46,32 @@ Jame: 56 <br />
 Alex: Такая рука недоступна, введите повторно <br />
 Jame: 3 <br />
 Jame cards: Carrot - 1; Corn - 2; Eggplant - 0;  Tomato - 0; <br />
-Price: Corn - ; Eggplant - ; Broccoli- ; Tomato - 
+Price: Corn - ; Eggplant - ; Broccoli- ; Tomato - <br />
 Leftover cards: <br />
 1) Carrot - 3; Corn - 2 <br />
 2) Tomato - 1; Eggplant - 2<br />
 Jame: введите, какую карту будем брать: <br />
 Alex: 2<br />
 Alex cards: Tomato - 1; Eggplant - 2; Corn - 0; Carrot - 0 <br />
-Price: Corn - ; Eggplant - ; Broccoli- ; Tomato - 
+Price: Corn - ; Eggplant - ; Broccoli- ; Tomato - <br />
 
-Table: 
-1) Carrot - 2; Tomato - 1
-2) Corn - 2; Tomato- 1
-3) Eggplant - 2; Tomato - 1
+Table: <br />
+1) Carrot - 2; Tomato - 1<br />
+2) Corn - 2; Tomato- 1<br />
+3) Eggplant - 2; Tomato - 1<br />
 Alex: введите, какую карту будем брать: <br />
-Jame: 1
-Jame cards: Corn - ; Eggplant - ; Broccoli - ; Tomato - 
-Price: Corn - ; Eggplant - ; Broccoli- ; Tomato - 
------
-Price: Corn - ; Eggplant - ; Broccoli - ; Tomato - ;
-Leftover cards:
-2) Corn - 2; Tomato- 1
-3) Eggplant - 2; Tomato - 1
-Alex: Corn - ; Eggplant - ; Broccoli - ; Tomato - ;
+Jame: 1<br />
+Jame cards: Corn - ; Eggplant - ; Broccoli - ; Tomato - <br />
+Price: Corn - ; Eggplant - ; Broccoli- ; Tomato - <br />
+-----<br />
+Price: Corn - ; Eggplant - ; Broccoli - ; Tomato - ;<br />
+Leftover cards:<br />
+2) Corn - 2; Tomato- 1<br />
+3) Eggplant - 2; Tomato - 1<br />
+Alex: Corn - ; Eggplant - ; Broccoli - ; Tomato - ;<br />
 Alex: введите, какую карту будем брать: <br />
-Alex: 2
-Alex: Corn - ; Eggplant - ; Broccoli - ; Tomato - ;
-Price: Corn - ; Eggplant - ; Broccoli- ; Tomato - ;
+Alex: 2<br />
+Alex: Corn - ; Eggplant - ; Broccoli - ; Tomato - ;<br />
+Price: Corn - ; Eggplant - ; Broccoli- ; Tomato - ;<br />
 
 
