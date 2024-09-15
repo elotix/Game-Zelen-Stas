@@ -76,7 +76,7 @@ Alex cards: Corn - ; Eggplant - ; Broccoli - ; Tomato - ;<br />
 Price: Corn - ; Eggplant - ; Broccoli- ; Tomato - ;<br />
 
 #Формат save-файла <br />
-
+```
 {
   "Price": "Eggplant - 0; Corn -1; Carrot -2; Tomato -3;",
   "Table": [
@@ -97,4 +97,4 @@ Price: Corn - ; Eggplant - ; Broccoli- ; Tomato - ;<br />
       "is_human": false
     }
   ]
-}
+}```
