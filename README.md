@@ -68,10 +68,10 @@ Price: Corn - ; Eggplant - ; Broccoli - ; Tomato - ;<br />
 Leftover cards:<br />
 2) Corn - 2; Tomato- 1<br />
 3) Eggplant - 2; Tomato - 1<br />
-Alex: Corn - ; Eggplant - ; Broccoli - ; Tomato - ;<br />
-Alex: введите, какую карту будем брать: <br />
+Alex cards: Corn - ; Eggplant - ; Broccoli - ; Tomato - ;<br />
+Jame: введите, какую карту будем брать: <br />
 Alex: 2<br />
-Alex: Corn - ; Eggplant - ; Broccoli - ; Tomato - ;<br />
+Alex cards: Corn - ; Eggplant - ; Broccoli - ; Tomato - ;<br />
 Price: Corn - ; Eggplant - ; Broccoli- ; Tomato - ;<br />
 
 
