@@ -41,7 +41,9 @@
 # Пример текстового интерфейса игры<br />
 ```
 Играют Player и AI.
+
 Price: C - 0; E - 1; B - 2; T - 3.
+
 Table: T - 3; T - 2, C - 1; B - 2, C - 1.
 AI: take B - 2, C - 1.
 Player: take C - 1; B - 2.
@@ -53,6 +55,42 @@ Player: take B - 2, T - 1.
 AI: take T - 2, B - 1.
 Overleft card: C - 2, B - 1. 
 Price: C - 2; E - 1; B - 3; T - 0.
+
+Table: T - 2, E - 1; E - 3; B - 1, C - 2.
+AI: take E - 3.
+Player: take B - 1, C - 2.
+Overleft card: T - 2, E - 1. 
+Price: C - 2; E - 2; B - 3; T - 2.
+
+Table: B - 2, T - 1; T - 2; B - 1, T - 2, C - 1.
+Player: take B - 2, T - 1.
+AI: take T - 2; B - 1.
+Overleft card: T - 2, C - 1. 
+Price: C - 3; E - 2; B - 3; T - 4.
+
+Table: C - 3; C - 2, T - 1; B - 3.
+AI: take B - 2, T - 1.
+Player: take C - 3.
+Overleft card: C - 2, T - 1. 
+Price: C - 5; E - 2; B - 3; T - 5.
+
+Table: C - 2, T - 1; B - 2, C - 1; C - 2, E - 1.
+Player: take B - 2, C - 1.
+AI: take C - 2, T - 1.
+Overleft card: C - 2, E - 1. 
+Price: C - 1; E - 3; B - 3; T - 5.
+
+Results
+AI: E - 3, B - 4, T - 5, C - 6.
+Points AI: 3*3 + 4*3 + 5*5 + 6*1 = 52
+Player: B - 10, C - 4, T - 4.
+Points Player: 10*3 + 4*1 + 4*5 = 54
+
+Player win.
+
+
+
+
 ```
 
 
