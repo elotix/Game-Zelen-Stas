@@ -98,11 +98,7 @@ Player win.
 ```
 {
   "Price": "E - 0; C - 1; B - 2; T - 3;",
-  "Table": [
-    1) B - 1; C - 2
-    2) T- 1; E - 2
-    3) B - 1; C - 2
-  ],
+  "Round": 1
   "current_player_index": 1,
   "players": [
   {
