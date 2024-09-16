@@ -40,22 +40,22 @@
 #Формат save-файла <br />
 ```
 {
-  "Price": "Eggplant - 0; Corn -1; Carrot -2; Tomato -3;",
+  "Price": "E - 0; C -1; B -2; T -3;",
   "Table": [
-    1) Carrot - 3; Corn - 2
-    2) Tomato - 1; Eggplant - 2
-    3) Carrot - 1; Corn - 2
+    1) B - 1; C - 2
+    2) T- 1; E - 2
+    3) B - 1; C - 2
   ],
   "current_player_index": 1,
   "players": [
   {
-      "name": "Jame",
-      "hand": "Carrot - 1; Corn - 2; Eggplant - 0;  Tomato - 0;"
+      "name": "Player",
+      "hand": "B - 1; C - 2; E - 0;  T - 0;"
       "is_human": true
     },
     {
-      "name": "Alex",
-      "hand": "Tomato - 1; Eggplant - 2; Corn - 0; Carrot - 0",
+      "name": "AI",
+      "hand": "T - 1; E - 2; C - 0; B - 0",
       "is_human": false
     }
   ]
