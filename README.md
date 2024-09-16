@@ -53,7 +53,7 @@ Player: take B - 2, T - 1.
 AI: take T - 2, B - 1.
 Overleft card: C - 2, B - 1. 
 Price: C - 2; E - 1; B - 3; T - 0.
-
+```
 
 
 # Формат save-файла <br />
@@ -79,3 +79,4 @@ Price: C - 2; E - 1; B - 3; T - 0.
     }
   ]
 }
+```
