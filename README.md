@@ -40,10 +40,18 @@
 
 # Пример текстового интерфейса игры<br />
 Играют Player и AI.
-Table: 
+Price: C - 0; E - 1; B - 2; T - 3.
+Table: T - 3; T - 2, C - 1; B - 2, C - 1.
+AI: take B - 2, C - 1.
+Player: take C - 1; B - 2.
+Overleft card: T - 3.
+Price: C - 0; E - 1; B - 2; T - 0.
 
-
-
+Table: B - 2, T - 1; C - 2, B - 1; T - 2, B - 1.
+Player: take B - 2, T - 1.
+AI: take T - 2, B - 1.
+Overleft card: C - 2, B - 1. 
+Price: C - 2; E - 1; B - 3; T - 0.
 
 
 
