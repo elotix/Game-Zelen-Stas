@@ -7,3 +7,13 @@ class Price:
             self.t = t
         else:
             raise ValueError
+
+    def __repr__(self):
+        return f'{self.c}{self.e}{self.b}{self.t}'
+
+    def __eq__(self, other):
+        return self.c == other.c and self.e == other.e and self.b == other.b and self.t == other.t
+
+    def save(self):
+        return repr(self)
+
