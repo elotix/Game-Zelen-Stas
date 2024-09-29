@@ -12,8 +12,14 @@ class Price:
         return f'{self.c}{self.e}{self.b}{self.t}'
 
     def __eq__(self, other):
-        return self.c == other.c and self.e == other.e and self.b == other.b and self.t == other.t
+        if isinstance(other, str):
+            return self.c == other.c and self.e == other.e and self.b == other.b and self.t == other.t
 
     def save(self):
         return repr(self)
 
+    def in_price():
+        return Price(int(input('c')),
+                     (int(input('e'))),
+                     (int(input('b'))),
+                     (int(input('t'))))
