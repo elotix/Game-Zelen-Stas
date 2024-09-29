@@ -1,4 +1,3 @@
-
 class Price:
     def __init__(self, c=0, e=0, b=0, t=0):
         if all([0 <= c <= 5, 0 <= e <= 5, 0 <= b <= 5, 0 <= t <= 5]):
@@ -18,6 +17,8 @@ class Price:
 
     def save(self):
         return repr(self)
+
+
 
     def in_price():
         return Price(int(input('c')),
