@@ -20,8 +20,4 @@ class Price:
 
 
 
-    def in_price():
-        return Price(int(input('c')),
-                     (int(input('e'))),
-                     (int(input('b'))),
-                     (int(input('t'))))
+
