@@ -39,6 +39,7 @@ class Card:
 
     @staticmethod
     def load(text):
+        """From 'МММ' to Card(М=3)"""
         counts = {}
         for v in Card.VEGETABLES:
             counts[v] = text.count(v)
