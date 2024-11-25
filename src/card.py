@@ -57,7 +57,6 @@ class Card:
         for veg in VEGETABLES:
             cards.append(Card.load(veg * 3))
 
-        # Удаляем карты с тремя одинаковыми овощами из списка
-        cards = list(dict.fromkeys(cards))  # Удаление дубликатов
-        return cards
+
+
 
