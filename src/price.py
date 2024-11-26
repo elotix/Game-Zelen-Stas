@@ -53,7 +53,9 @@ class Price:
     def add(self, other):
         if isinstance(other, Price):
             for v in self.VEGETABLES:
+
                 new_value = getattr(self, v) + getattr(other, v)
+                print(new_value)
                 setattr(self, v, min(new_value, Price.MAX_PRICE))
         elif isinstance(other, dict):
             for v in other.keys():
@@ -72,3 +74,4 @@ class Price:
     def clear(self):
         for v in self.VEGETABLES:
             setattr(self, v, 0)  # Сбрасывает все овощи до 0
+
