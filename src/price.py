@@ -1,5 +1,5 @@
 from src.card import Card
-
+''
 
 class Price:
     VEGETABLES = Card.VEGETABLES
