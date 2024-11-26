@@ -7,11 +7,11 @@ class Price:
 
     def __init__(self, **kwargs):
         # Создаем овощи, значения по умолчанию будут 0
-        for vegetable in self.VEGETABLES:
-            if vegetable in kwargs:
-                setattr(self, vegetable, kwargs[vegetable])
-            else:
-                setattr(self, vegetable, 0)
+        self.t = kwargs.get('Т', 0)
+        self.m = kwargs.get('М', 0)
+        self.k = kwargs.get('К', 0)
+        self.b = kwargs.get('Б', 0)
+        self.z = kwargs.get('З', 0)
 
         # Проверяем все переданные овощи
         for vegetable in kwargs.keys():
@@ -34,18 +34,17 @@ class Price:
                 raise ValueError(f"Цена овоща должна быть между 0 и {Price.MAX_PRICE}")
 
     def __repr__(self):
-        result = ""
-        for vegetable in self.VEGETABLES:
-            result += vegetable + ":" + str(getattr(self, vegetable)) + " "
-        return result.strip()  # Убираем лишние пробелы
+        result = f'T:{self.t} М:{self.m} К:{self.k} Б:{self.b} З:{self.z}'
+        return result
 
     def __eq__(self, other):
         if not isinstance(other, Price):
             return False
-        for v in self.VEGETABLES:
-            if getattr(self, v) != getattr(other, v):
-                return False
-        return True
+        return self.t == other.t \
+            and self.m == other.m \
+            and self.k == other.k \
+            and self.b == other.b \
+            and self.z == other.z
 
     def save(self):
         return repr(self)
