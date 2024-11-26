@@ -34,7 +34,7 @@ class Price:
                 raise ValueError(f"Цена овоща должна быть между 0 и {Price.MAX_PRICE}")
 
     def __repr__(self):
-        result = f'T:{self.t} М:{self.m} К:{self.k} Б:{self.b} З:{self.z}'
+        result = f'Т:{self.t} М:{self.m} К:{self.k} Б:{self.b} З:{self.z}'
         return result
 
     def __eq__(self, other):
@@ -49,28 +49,25 @@ class Price:
     def save(self):
         return repr(self)
 
-    def add(self, other):
-        if isinstance(other, Price):
-            for v in self.VEGETABLES:
+    @classmethod
+    def load(cls, price: str|dict):
+        """'Т:1 М:2 К:3 Б:4 З:5' или {'T': 1} """
+        if isinstance(price, str):
+            words = price.split()
+            d = {}
+            for word in words:
+                # word = 'T:1'
+                k, v = word.split(':')
+                d[k] = int(v)
+            price = d
+        return cls(**price)
 
-                new_value = getattr(self, v) + getattr(other, v)
-                print(new_value)
-                setattr(self, v, min(new_value, Price.MAX_PRICE))
-        elif isinstance(other, dict):
-            for v in other.keys():
-                if v in self.VEGETABLES:
-                    new_value = getattr(self, v) + other[v]
-                    setattr(self, v, min(new_value, Price.MAX_PRICE))
-        else:
-            raise TypeError("Неподдерживаемый тип для добавления")
-
-    def total_value(self):
-        total = 0
-        for v in self.VEGETABLES:
-            total += getattr(self, v)
-        return total  # Возвращает общую стоимость овощей в коробке
-
-    def clear(self):
-        for v in self.VEGETABLES:
-            setattr(self, v, 0)  # Сбрасывает все овощи до 0
+    def add(self, card: Card):
+        def add_vegetabel(a, b):
+            return (a + b) % (self.MAX_PRICE + 1)
+        self.t = add_vegetabel(self.t, card.t)
+        self.k = add_vegetabel(self.k, card.k)
+        self.m = add_vegetabel(self.m, card.m)
+        self.b = add_vegetabel(self.b, card.b)
+        self.z = add_vegetabel(self.z, card.z)
 
