@@ -29,8 +29,6 @@ def test_card_equality():
     assert card1 == card2
     assert card1 != card3
 
-
-
 def test_card_load():
     text = 'ТТМ'
     card = Card.load(text)
@@ -39,7 +37,6 @@ def test_card_load():
     assert card.k == 0
     assert card.b == 0
     assert card.z == 0
-
 
 
 

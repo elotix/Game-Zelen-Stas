@@ -8,7 +8,7 @@ class Card:
         total = sum(kwargs.values())
         if total != self.SIZE:
             raise ValueError("Сумма овощей должна равняться 3.")
-        
+
         self.t = kwargs.get('Т', 0)
         self.m = kwargs.get('М', 0)
         self.k = kwargs.get('К', 0)
@@ -57,7 +57,3 @@ class Card:
         cards += cards.copy()
         for veg in VEGETABLES:
             cards.append(Card.load(veg * 3))
-
-
-
-
