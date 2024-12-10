@@ -1,4 +1,6 @@
 from src.card import Card
+from src.price import Price
+
 ''
 class Hand:
 
@@ -11,12 +13,8 @@ class Hand:
         return self.save()
 
     def save_cards(self):
-        saved_cards = []
-        for c in self.card_list:
-            saved_cards.append(c.save())
-        result = ''
-        for sc in saved_cards:
-            result += sc + ' '
+        saved_cards = map(lambda c: c.save(), self.card_list)
+        result = ' '.join(saved_cards)
         return result.strip()
 
     def __eq__(self, other):
@@ -36,6 +34,10 @@ class Hand:
         self.card_list.append(card)
 
     def __getattr__(self, name):
+        """ hand.Б, а этого Б нет, тогда пробегаем по всем картам руки и берем карта.Б
+        То есть считает сколько овощей с именем name во всех картах руки.
+        На картах нет Б, там маленькие латинские буквы!!!
+        """
         if name in Card.VEGETABLES:
             total = 0
             for card in self.card_list:
@@ -43,8 +45,8 @@ class Hand:
             return total
         raise AttributeError
 
-    def score(self, other):
+    def score(self, price: Price):
         total_score = 0
-        for v in Card.VEGETABLES:
-            total_score += getattr(self, v) * getattr(other, v)
+        for card in self.card_list:
+            total_score += card.score(price)
         return total_score
