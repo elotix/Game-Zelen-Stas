@@ -30,10 +30,28 @@ class GameState:
 
     def save_game(self):
         return {  # Сохранение состояния игры в словарь
-            "cards": [c.save() for c in self.cards],
-            "price": str(self.price),
-            "deck": str(self.deck),
             "players": [p.save() for p in self.players],
+            "cards": [c.save() for c in self.cards],
+            "deck": str(self.deck),
+            "price": str(self.price),
             "current_player_index": self.current_player_index,
             "round_index": self.round_index
         }
+
+    @classmethod
+    def load(cls, data: dict):
+        players = [Player.load(d) for d in data["players"]]
+        cards = [Card.load(c) for c in data["cards"]]
+
+        return cls(
+            players=players,
+            cards=cards,
+            deck=Deck.load(data["deck"]),
+            price=Price.load(data["price"]),
+            current_player_index=int(data["current_player_index"]),
+            round_index=int(data["round_index"])
+        )
+
+    def next_player(self):
+        n = len(self.players)
+        self.current_player_index = (self.current_player_index + 1) % n
