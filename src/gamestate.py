@@ -56,3 +56,7 @@ class GameState:
     def next_player(self):
         n = len(self.players)
         self.current_player_index = (self.current_player_index + 1) % n
+
+    def deal_cards(self):
+        num = len(self.players)
+        self.cards = [self.deck.draw_card() for _ in range(num + 1)]
