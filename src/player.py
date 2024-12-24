@@ -6,19 +6,17 @@ from src.price import Price
 
 
 class Player:
-    def __init__(self, n, h):
+    def __init__(self, n, h, s=0):
         self.name = n
         self.hand = h
+        self.score = s
 
     def __str__(self):
-        return self.name + ': ' + str(self.hand)
+        return f'{self.name}({self.score}): {self.hand}'
 
     def save(self):
-        return {'name': self.name, 'hand': str(self.hand)}
+        return {'name': self.name, 'hand': str(self.hand), 'score':self.score}
 
     @classmethod
     def load(cls, d):
-        return cls(d['name'], Hand.load(d['hand']))
-
-    def score(self, price: Price):
-        return self.hand.score(price)
+        return cls(n=d['name'], h=Hand.load(d['hand']), s=int(d['score']))
