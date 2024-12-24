@@ -12,8 +12,8 @@ data = {
     "price": 'Т:5 М:4 К:3 Б:2 З:1',
     "deck": 'ТМК КБЩ БЗЗ ТММ МКК',
     "players": [
-        {'name': 'Bob', 'hand': 'ТМК КБЗ БЗЗ'},
-        {'name': 'Leon', 'hand': 'ТММ МКК КББ'}],
+        {'name': 'Bob', 'hand': 'ТМК КБЗ БЗЗ', 'score': 5},
+        {'name': 'Leon', 'hand': 'ТММ МКК КББ', 'score': 10}],
     "current_player_index": 1,
     "round_index": 1}
 Bob = Player.load(data["players"][0])
@@ -69,8 +69,8 @@ def test_eq():
 #
 # def test_next_player():
 #     game = GameState.load(data)
-#     assert str(game.current_player()) == 'Leon: ТММ МКК КББ'
+#     assert str(game.current_player()) == 'Leon(10): ТММ МКК КББ'
 #     game.next_player()
-#     assert str(game.current_player()) == 'Bob: ТМК КБЗ БЗЗ'
+#     assert str(game.current_player()) == 'Bob(5): ТМК КБЗ БЗЗ'
 #     game.next_player()
-#     assert str(game.current_player()) == 'Leon: ТММ МКК КББ'
+#     assert str(game.current_player()) == 'Leon(10): ТММ МКК КББ'
