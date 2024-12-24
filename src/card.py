@@ -49,11 +49,9 @@ class Card:
     def all_cards(VEGETABLES=None):
         if VEGETABLES is None:
             VEGETABLES = Card.VEGETABLES
-        cards = []
-        for veg1 in VEGETABLES:
-            for veg2 in VEGETABLES:
-                if veg1 != veg2:
-                    cards.append(Card.load(veg1 * 2 + veg2))
+        cards = [Card.load(veg1 * 2 + veg2 * 1) for veg1 in VEGETABLES for veg2 in VEGETABLES]
         cards += cards.copy()
-        for veg in VEGETABLES:
-            cards.append(Card.load(veg * 3))
+        r_card = [Card.load(veg * 3) for veg in VEGETABLES]
+        for card in r_card:
+            cards.remove(card)
+        return cards
