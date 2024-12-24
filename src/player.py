@@ -18,7 +18,7 @@ class Player:
 
     @classmethod
     def load(cls, d):
-        return cls(d['name'], Hand.load_cards(d['hand']))
+        return cls(d['name'], Hand.load(d['hand']))
 
     def score(self, price: Price):
         return self.hand.score(price)
