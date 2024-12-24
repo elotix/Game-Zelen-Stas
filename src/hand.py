@@ -9,26 +9,25 @@ class Hand:
             cards = []
         self.card_list = cards
 
+
     def __repr__(self):
         return self.save()
 
-    def save_cards(self):
+    def save(self):
         saved_cards = map(lambda c: c.save(), self.card_list)
         result = ' '.join(saved_cards)
         return result.strip()
 
     def __eq__(self, other):
         if isinstance(other, str):
-            other_hand = Hand.load(other)
+            other_hand = Hand.load_cards(other)
             return self.card_list == other_hand.card_list
         return False
 
     @classmethod
-    def load_cards(cls, text):
-        cards_from_text = []
-        for s in text.split():
-            cards_from_text.append(Card.load(s))
-        return cls(cards=cards_from_text)
+    def load(cls, text: str):
+        cards = [Card.load(s) for s in text.split()]
+        return cls(cards=cards)
 
     def add_card(self, card):
         self.card_list.append(card)

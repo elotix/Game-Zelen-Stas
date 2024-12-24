@@ -2,12 +2,11 @@ import json
 import typing
 
 from src.hand import Hand
-
 from src.price import Price
 
 
 class Player:
-    def __init__(self, n, h, s=0):
+    def __init__(self, n, h):
         self.name = n
         self.hand = h
 
@@ -19,7 +18,7 @@ class Player:
 
     @classmethod
     def load(cls, d):
-        return cls(d['name'], Hand.load(d['hand']))
+        return cls(d['name'], Hand.load_cards(d['hand']))
 
     def score(self, price: Price):
         return self.hand.score(price)
