@@ -10,7 +10,7 @@ class GameState:
     MAX_PLAYERS = 6
     MIN_PLAYABLE_CARD = 1
 
-    def __init__(self, cards, price, deck, players, current_player_index=0, round_index=1):
+    def __init__(self, players, deck, price, cards, current_player_index=0, round_index=1):
         self.cards = cards  # Карты
         self.price = price  # Цены на овощи
         self.deck = deck  # Колода
