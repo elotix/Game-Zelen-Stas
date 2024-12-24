@@ -37,9 +37,9 @@ def test_init():
 def test_current_players():
     players = [Bob, Leon]
     game = GameState(players=players, deck=full_deck, price=price, cards=cards, round_index=1)
-    assert game.get_current_player() == Bob
+    assert game.current_player() == Bob
     game = GameState(players=players, deck=full_deck, price=price, cards=cards, current_player_index=1, round_index=1)
-    assert game.get_current_player() == Leon
+    assert game.current_player() == Leon
 
 
 def test_eq():

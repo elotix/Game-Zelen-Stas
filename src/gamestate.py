@@ -26,7 +26,7 @@ class GameState:
                 self.current_player_index == other.current_player_index and
                 self.round_index == other.round_index)
 
-    def get_current_player(self):
+    def current_player(self):
         return self.players[self.current_player_index]
 
     def save(self):
