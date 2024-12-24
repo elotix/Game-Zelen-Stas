@@ -8,13 +8,14 @@ class GameState:
     MAX_ROUND = 6
     MIN_PLAYERS = 2
     MAX_PLAYERS = 6
+    MIN_PLAYABLE_CARD = 1
 
     def __init__(self, cards, price, deck, players, current_player_index=0, round_index=1):
-        self.cards = cards  # Список игроков
-        self.price = price  # Колода карт
-        self.deck = deck  # Индекс текущего игрока
-        self.players = players  # Цены на овощи
-        self.current_player_index = current_player_index  # Список карт
+        self.cards = cards  # Карты
+        self.price = price  # Цены на овощи
+        self.deck = deck  # Колода
+        self.players = players  # Список игроков
+        self.current_player_index = current_player_index  # Индекс текущего игрока
         self.round_index = round_index  # Номер раунда
 
     def __eq__(self, other):
@@ -28,7 +29,7 @@ class GameState:
     def get_current_player(self):
         return self.players[self.current_player_index]
 
-    def save_game(self):
+    def save(self):
         return {  # Сохранение состояния игры в словарь
             "players": [p.save() for p in self.players],
             "cards": [c.save() for c in self.cards],
@@ -45,7 +46,7 @@ class GameState:
 
         return cls(
             players=players,
-            cards=cards,
+            cards=[Card.load(s) for s in data["cards"]],
             deck=Deck.load(data["deck"]),
             price=Price.load(data["price"]),
             current_player_index=int(data["current_player_index"]),
