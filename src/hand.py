@@ -34,15 +34,13 @@ class Hand:
 
     def __getattr__(self, name):
         """ hand.Б, а этого Б нет, тогда пробегаем по всем картам руки и берем карта.Б
-        То есть считает сколько овощей с именем name во всех картах руки.
-        На картах нет Б, там маленькие латинские буквы!!!
-        """
+                То есть считает сколько овощей с именем name во всех картах руки.
+                На картах нет Б, там маленькие латинские буквы!!!
+                """
         if name in Card.VEGETABLES:
-            total = 0
-            for card in self.card_list:
-                total += getattr(card, name)
-            return total
+            return sum(getattr(card, name) for card in self.cards)
         raise AttributeError
+
 
     def score(self, price: Price):
         total_score = 0
