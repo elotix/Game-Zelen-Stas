@@ -20,7 +20,7 @@ class Hand:
 
     def __eq__(self, other):
         if isinstance(other, str):
-            other_hand = Hand.load_cards(other)
+            other_hand = Hand.load(other)
             return self.card_list == other_hand.card_list
         return False
 
