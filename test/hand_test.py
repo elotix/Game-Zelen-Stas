@@ -25,6 +25,7 @@ def test_add_card():
     assert repr(h) == 'ТМК КБЗ ЗЗЗ ККК'
 
 def test_score():
-    h = Hand(cards=[Card.load('МКЗ')])
+    h = Hand(cards=[Card.load('МКК')])
     p = Price(Т=1, М=2, К=3, Б=4, З=5)
-    assert h.score(p) == 2 + 3 + 5
+    assert h.score(p) == 2 + 3 * 2
+
