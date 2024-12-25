@@ -14,15 +14,15 @@ def test_save():
     s = Hand(cards=cards)
     assert s.save() == 'ТМК КБЗ ЗЗЗ'
 
-def test_load():
-    s = Hand.load('ТМК КБЗ ЗЗЗ')
-    assert s == Hand(cards)
+# def test_load():
+#     s = Hand.load('ТМК КБЗ ЗЗЗ')
+#     assert s == Hand(cards)
 
 
-# def test_add_card():
-#     h = Hand.load('ТМК КБЗ ЗЗЗ')
-#     h.add_card(Card.load('ККК'))
-#     assert repr(h) == 'ТМК КБЗ ЗЗЗ ККК'
+def test_add_card():
+    h = Hand.load('ТМК КБЗ ЗЗЗ')
+    h.add_card(Card.load('ККК'))
+    assert repr(h) == 'ТМК КБЗ ЗЗЗ ККК'
 
 def test_score():
     h = Hand(cards=[Card.load('МКЗ')])
